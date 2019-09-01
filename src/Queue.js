@@ -26,6 +26,13 @@ class Queue {
         this.last = node;
     }
 
+    peek() {
+        if (this.first === null) {
+            return;
+        }
+        return this.first.value
+    }
+
     // Time complexity for removing items from the queue is Constant time O(1)
     dequeue() {
         //if the queue is empty, there is nothing to return
@@ -44,6 +51,14 @@ class Queue {
 }
 
 function main() {
+    const starTrekQ = new Queue()
+    starTrekQ.enqueue('Kirk')
+    starTrekQ.enqueue('Uhura')
+    starTrekQ.enqueue('Sulu')
+    starTrekQ.enqueue('Checkov ')
+
+    console.log(starTrekQ.dequeue())
+    console.log(starTrekQ.peek())
 
 }
 
